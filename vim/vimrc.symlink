@@ -1,0 +1,105 @@
+filetype off
+call pathogen#infect()
+filetype plugin indent on
+
+set nocompatible
+
+set modelines=0
+
+set tabstop=3
+set shiftwidth=3
+set softtabstop=3
+"set expandtab
+
+" Autoload this file when it changes
+au BufWritePost .vimrc :so %
+
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set undofile
+let mapleader = ","
+
+" Search options
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+
+" Wrapping
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+au FocusLost * :wa
+
+" Aesthetics
+set guifont=Source\ Code\ Pro:h13
+set guioptions-=T
+colorscheme Tomorrow-Night
+
+" Keymaps
+nnoremap ; :
+nnoremap <leader>ev <C-w><C-v><C-w><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>q gqip
+inoremap jj <ESC>
+nmap <leader>a :Ack 
+nnoremap <leader><tab> :Sscratch<cr>
+nnoremap <leader>R :RainbowParenthesesToggle<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>l :TagbarToggle<cr>
+nnoremap <leader>r :YcmForceCompileAndDiagnostics<cr>
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+
+" Split window navigation
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Visible whitespace
+set list
+set listchars=tab:»\ ,trail:·,extends:>,precedes:<
+
+" Swap files collect in /tmp
+set dir=/tmp//,.
+set undodir=/tmp//,.
+set backupdir=/tmp//,.
+
+" Tags: check for "tags", walk up dirs until home
+set tags=./tags;~
+
+" YCM global config to avoid cluttering directories
+let g:ycm_global_ycm_extra_conf = '/Users/ben/.vim/ycm_extra_conf.py'
+let g:ycm_complete_in_comments_and_strings = 1
+
+" C indentation options
+set cino=:0,g0
+
+" Auto stuff
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.md set foldmethod=manual
+au BufNewFile,BufRead *.md setlocal spell
+
+
+" Bindings

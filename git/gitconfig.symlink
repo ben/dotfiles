@@ -1,0 +1,40 @@
+[user]
+	name = Ben Straub
+	email = bs@github.com
+
+[alias]
+	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lola = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	excludesfile = /Users/ben/.gitignore_global
+	crlf = input
+	lg = log --graph --pretty=oneline --abbrev-commit --decorate
+	lga = log --graph --pretty=oneline --abbrev-commit --decorate --all
+	st = status -sbu
+
+[hub]
+	protocol = https
+
+[credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+
+[push]
+	default = upstream
+[core]
+	excludesfile = /opt/boxen/config/git/gitignore
+	editor = mvim -f
+[color]
+	ui = auto
+
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE"
+	trustExitCode = true
+	keepBackup = false
+[difftool "diffmerge"]
+	cmd = "diffmerge $LOCAL $REMOTE"
+	trustExitCode = true
+
+[merge]
+	tool = diffmerge
+	conflictstyle = diff3
+[diff]
+	tool = diffmerge

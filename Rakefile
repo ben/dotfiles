@@ -8,7 +8,7 @@ task :install do
 	linkables = Dir.glob('*/**{.symlink}')
 
 	skip_all = false
-	overwrite_all = false
+	overwrite_all = true
 	backup_all = false
 
 	linkables.each do |linkable|

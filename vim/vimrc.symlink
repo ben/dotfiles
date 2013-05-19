@@ -53,7 +53,9 @@ au FocusLost * :wa
 " Aesthetics
 set guifont=Source\ Code\ Pro:h13
 set guioptions-=T
-colorscheme Tomorrow-Night
+syntax enable
+set background=dark
+colorscheme solarized
 
 " Keymaps
 nnoremap ; :

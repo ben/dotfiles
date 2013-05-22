@@ -12,7 +12,7 @@ set softtabstop=3
 "set expandtab
 
 " Autoload this file when it changes
-au BufWritePost .vimrc :so %
+"au BufWritePost .vimrc :so %
 
 set scrolloff=3
 set autoindent
@@ -82,10 +82,19 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Visible whitespace
-set list
-set listchars=tab:»\ ,trail:×,extends:>,precedes:<
 nmap <leader>t :set list!<CR>
-let c_space_errors=1 " Highlight trailing spaces in current line
+set list
+set listchars=tab:»\ ,extends:>,precedes:<,trail:×
+highlight ExtraWhitespace ctermfg=red guifg=#dc322f
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertEnter * set listchars=tab:»\ ,extends:>,trail:\ ,precedes:<
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * set listchars=tab:»\ ,extends:>,trail:×,precedes:<
+autocmd BufWinLeave * call clearmatches()
+
+
 
 " Swap files collect in /tmp
 set dir=/tmp//,.

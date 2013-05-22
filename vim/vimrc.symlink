@@ -82,7 +82,7 @@ nnoremap <C-l> <C-w>l
 " Visible whitespace
 set list
 set listchars=tab:»\ ,trail:×,extends:>,precedes:<
-nmap <leader>w :set list!<CR>
+nmap <leader>t :set list!<CR>
 let c_space_errors=1 " Highlight trailing spaces in current line
 
 " Swap files collect in /tmp

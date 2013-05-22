@@ -62,7 +62,7 @@ nnoremap ; :
 nnoremap <leader>ev <C-w><C-v><C-w><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>q gqip
 inoremap jj <ESC>
-nmap <leader>a :Ack 
+nmap <leader>a :Ack
 nnoremap <leader><tab> :Sscratch<cr>
 nnoremap <leader>R :RainbowParenthesesToggle<cr>
 nnoremap <tab> %
@@ -81,7 +81,9 @@ nnoremap <C-l> <C-w>l
 
 " Visible whitespace
 set list
-set listchars=tab:»\ ,trail:·,extends:>,precedes:<
+set listchars=tab:»\ ,trail:×,extends:>,precedes:<
+nmap <leader>w :set list!<CR>
+let c_space_errors=1 " Highlight trailing spaces in current line
 
 " Swap files collect in /tmp
 set dir=/tmp//,.

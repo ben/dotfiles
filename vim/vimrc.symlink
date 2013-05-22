@@ -53,6 +53,8 @@ au FocusLost * :wa
 " Aesthetics
 set guifont=Source\ Code\ Pro:h13
 set guioptions-=T
+let g:solarized_visibility="low"    "default value is normal
+let g:solarized_hitrail=1    "default value is 0
 syntax enable
 set background=dark
 colorscheme solarized

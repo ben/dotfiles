@@ -63,7 +63,7 @@ nnoremap ; :
 nnoremap <leader>ev <C-w><C-v><C-w><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>q gqip
 inoremap jj <ESC>
-nmap <leader>a :Ack
+nmap <leader>a :Ack 
 nnoremap <leader><tab> :Sscratch<cr>
 nnoremap <leader>R :RainbowParenthesesToggle<cr>
 nnoremap <tab> %

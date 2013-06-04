@@ -114,5 +114,3 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.md set foldmethod=manual
 au BufNewFile,BufRead *.md setlocal spell
 
-
-" Bindings

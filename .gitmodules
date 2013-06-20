@@ -43,3 +43,6 @@
 [submodule "vim/vim.symlink/bundle/gyp.vim"]
 	path = vim/vim.symlink/bundle/gyp.vim
 	url = https://github.com/kelan/gyp.vim
+[submodule "vim/vim.symlink/bundle/tabular"]
+	path = vim/vim.symlink/bundle/tabular
+	url = https://github.com/godlygeek/tabular

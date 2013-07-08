@@ -51,7 +51,7 @@ set colorcolumn=85
 au FocusLost * :wa
 
 " Aesthetics
-set guifont=Source\ Code\ Pro:h13
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 set guioptions-=T
 let g:solarized_hitrail=1    "default value is 0
 syntax enable
@@ -114,3 +114,7 @@ au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.md set foldmethod=manual
 au BufNewFile,BufRead *.md setlocal spell
 
+let g:markdown_fenced_languages = ['c', 'json']
+
+let g:airline_powerline_fonts=1
+let g:airline_theme='badwolf'

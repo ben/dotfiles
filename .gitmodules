@@ -46,3 +46,6 @@
 [submodule "vim/vim.symlink/bundle/tabular"]
 	path = vim/vim.symlink/bundle/tabular
 	url = https://github.com/godlygeek/tabular
+[submodule "vim/vim.symlink/bundle/vim-airline"]
+	path = vim/vim.symlink/bundle/vim-airline
+	url = https://github.com/bling/vim-airline

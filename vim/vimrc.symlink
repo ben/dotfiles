@@ -57,6 +57,8 @@ let g:solarized_hitrail=1    "default value is 0
 syntax enable
 set background=dark
 colorscheme solarized
+let g:airline_powerline_fonts=1
+let g:airline_theme='badwolf'
 
 " Keymaps
 nnoremap ; :
@@ -72,6 +74,7 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>l :TagbarToggle<cr>
 nnoremap <leader>r :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <C-p> :CtrlPMixed<cr>
 
 " Split window navigation
 nnoremap <leader>w <C-w>v<C-w>l
@@ -116,5 +119,3 @@ au BufNewFile,BufRead *.md setlocal spell
 
 let g:markdown_fenced_languages = ['c', 'json']
 
-let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'

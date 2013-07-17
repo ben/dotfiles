@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 filetype off
 call pathogen#infect()
 filetype plugin indent on
@@ -51,13 +53,17 @@ set colorcolumn=85
 au FocusLost * :wa
 
 " Aesthetics
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+if has("win32")
+   set guifont=Consolas:h14
+else
+	set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+	let g:airline_powerline_fonts=1
+endif
 set guioptions-=T
 let g:solarized_hitrail=1    "default value is 0
 syntax enable
 set background=dark
 colorscheme solarized
-let g:airline_powerline_fonts=1
 let g:airline_theme='badwolf'
 
 " Keymaps
@@ -101,6 +107,10 @@ autocmd BufWinLeave * call clearmatches()
 set dir=/tmp//,.
 set undodir=/tmp//,.
 set backupdir=/tmp//,.
+if has("win32")
+   set noswapfile
+   set nobackup
+endif
 
 " Tags: check for "tags", walk up dirs until home
 set tags=./tags;~

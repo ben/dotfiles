@@ -40,3 +40,5 @@
 	tool = diffmerge
 [rerere]
 	enabled = true
+[help]
+	autocorrect = 1

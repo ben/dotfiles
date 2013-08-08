@@ -126,6 +126,7 @@ set cino=:0,g0
 au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.md set foldmethod=manual
 au BufNewFile,BufRead *.md setlocal spell
+au BufNewFile,BufRead *.pp set filetype=ruby
 
 let g:markdown_fenced_languages = ['c', 'json']
 

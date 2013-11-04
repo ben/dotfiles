@@ -21,7 +21,7 @@
 	default = upstream
 [core]
 	excludesfile = /opt/boxen/config/git/gitignore
-	editor = vi
+	editor = mvim -f
 [color]
 	ui = auto
 

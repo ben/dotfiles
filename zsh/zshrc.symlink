@@ -65,3 +65,6 @@ fi
 export PATH="$DOTFILES/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+
+# added by travis gem
+[ -f /Users/ben/.travis/travis.sh ] && source /Users/ben/.travis/travis.sh

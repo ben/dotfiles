@@ -1,6 +1,6 @@
 [user]
 	name = Ben Straub
-	email = bs@github.com
+	email = ben@straub.cc
 
 [alias]
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -13,9 +13,6 @@
 
 [hub]
 	protocol = https
-
-[credential]
-	helper = /opt/boxen/bin/boxen-git-credential
 
 [push]
 	default = upstream
@@ -42,3 +39,8 @@
 	enabled = true
 [help]
 	autocorrect = 1
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[credential]
+	helper = osxkeychain

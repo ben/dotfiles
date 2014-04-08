@@ -1,1 +1,1 @@
-export PATH=~/bin:/opt/boxen/homebrew/bin:$PATH
+export PATH=~/bin:$PATH

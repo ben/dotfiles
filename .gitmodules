@@ -33,7 +33,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/vim.symlink/bundle/xmledit"]
 	path = vim/vim.symlink/bundle/xmledit
-	url = https://github.com/ukima/xmledit.git
+	url = https://github.com/sukima/xmledit.git
 [submodule "vim/vim.symlink/bundle/vim-colors-solarized"]
 	path = vim/vim.symlink/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git

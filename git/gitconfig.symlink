@@ -17,7 +17,7 @@
 [push]
 	default = upstream
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore_global
 	editor = mvim -f
 [color]
 	ui = auto

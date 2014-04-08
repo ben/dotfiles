@@ -44,3 +44,5 @@
 	smudge = git-media-smudge %f
 [credential]
 	helper = osxkeychain
+[fetch]
+	prune = true

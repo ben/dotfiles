@@ -1,2 +1,2 @@
-alias git=hub
 alias gs='git st'
+alias gbr='hub browse'

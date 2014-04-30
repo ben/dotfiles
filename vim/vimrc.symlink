@@ -60,10 +60,16 @@ else
 	let g:airline_powerline_fonts=1
 endif
 set guioptions-=T
-let g:solarized_hitrail=1    "default value is 0
 syntax enable
-set background=dark
-colorscheme solarized
+
+if has("gui")
+	set background=dark
+	let g:solarized_hitrail=1    "default value is 0
+	colorscheme solarized
+else
+	colorscheme Tomorrow-Night
+endif
+
 let g:airline_theme='badwolf'
 
 " Keymaps

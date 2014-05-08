@@ -46,7 +46,7 @@ DEFAULT_USER="benstraub"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow-avh osx colored-man zsh-syntax-highlighting brew sbt scala)
+plugins=(git hub git-flow-avh osx colored-man zsh-syntax-highlighting brew sbt scala)
 
 source $ZSH/oh-my-zsh.sh
 

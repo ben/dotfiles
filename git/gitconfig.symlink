@@ -10,6 +10,8 @@
 	lg = log --graph --pretty=oneline --abbrev-commit --decorate
 	lga = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	st = status -sbu
+	ci = commit
+	co = checkout
 
 [hub]
 	protocol = https
@@ -23,11 +25,11 @@
 	ui = auto
 
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE"
+	cmd = "/Applications/DiffMerge.app/Contents/MacOS/diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE"
 	trustExitCode = true
 	keepBackup = false
 [difftool "diffmerge"]
-	cmd = "diffmerge $LOCAL $REMOTE"
+	cmd = "/Applications/DiffMerge.app/Contents/MacOS/diffmerge $LOCAL $REMOTE"
 	trustExitCode = true
 
 [merge]

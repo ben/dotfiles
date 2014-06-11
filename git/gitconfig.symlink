@@ -50,3 +50,5 @@
 	prune = true
 [pull]
 	rebase = true
+[gh]
+	protocol = https

@@ -1,2 +1,2 @@
 alias gs='git st'
-alias gbr='hub browse'
+eval "$(gh alias -s)"

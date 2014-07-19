@@ -62,12 +62,12 @@ endif
 set guioptions-=T
 syntax enable
 
-if has("gui")
+if &term=~'gui'
 	set background=dark
 	let g:solarized_hitrail=1    "default value is 0
 	colorscheme solarized
 else
-	colorscheme Tomorrow-Night
+	colorscheme Tomorrow-Night-Bright
 endif
 
 let g:airline_theme='badwolf'

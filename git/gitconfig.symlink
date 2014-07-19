@@ -32,11 +32,20 @@
 	cmd = "/Applications/DiffMerge.app/Contents/MacOS/diffmerge $LOCAL $REMOTE"
 	trustExitCode = true
 
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+
 [merge]
-	tool = diffmerge
+	;tool = diffmerge
+	tool = p4merge
 	;conflictstyle = diff3
 [diff]
-	tool = diffmerge
+	tool = p4diff
+	;tool = p4merge
+	;external = p4diff
 [rerere]
 	enabled = true
 [help]

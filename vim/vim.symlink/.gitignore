@@ -1,3 +1,4 @@
 .VimballRecord
 .netrwhist
 *.pyc
+bundle/*

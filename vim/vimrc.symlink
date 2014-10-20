@@ -1,7 +1,22 @@
 set encoding=utf-8
-
 filetype off
-call pathogen#infect()
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'jlanzarotta/bufexplorer'
+call vundle#end()
+
+" Pathogen
+" call pathogen#infect()
+
 filetype plugin indent on
 
 set nocompatible
@@ -122,8 +137,9 @@ endif
 set tags=./tags;~
 
 " YCM global config to avoid cluttering directories
-let g:ycm_global_ycm_extra_conf = '/Users/ben/.vim/ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '/Users/ben/.vim/ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
 
 " C indentation options
 set cino=:0,g0

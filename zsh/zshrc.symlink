@@ -9,8 +9,6 @@ ZSH_THEME="agnoster"
 DEFAULT_USER="ben"
 #ZSH_THEME="blinks"
 #ZSH_THEME="eastwood"
-#ZSH_THEME="garyblessington"
-#ZSH_THEME="muse"
 #ZSH_THEME="nicoulaj"
 #ZSH_THEME="miloshadzic"
 
@@ -47,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gh git-flow-avh osx colored-man zsh-syntax-highlighting brew virtualenv boot2docker docker)
+plugins=(git gh osx colored-man zsh-syntax-highlighting brew virtualenv boot2docker docker)
 
 source $ZSH/oh-my-zsh.sh
 

@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kchmck/vim-coffee-script'
 call vundle#end()
 
 " Pathogen
@@ -23,9 +24,9 @@ set nocompatible
 
 set modelines=0
 
-set tabstop=3
-set shiftwidth=3
-set softtabstop=3
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 "set expandtab
 
 " Autoload this file when it changes

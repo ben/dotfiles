@@ -21,7 +21,7 @@
 [push]
 	default = upstream
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/ben/.gitignore_global
 	;editor = atom --wait
 [color]
 	ui = auto
@@ -43,7 +43,7 @@
 [merge]
 	;tool = diffmerge
 	tool = p4merge
-	conflictstyle = diff3
+	;conflictstyle = diff3
 [diff]
 	tool = p4diff
 	;tool = p4merge
@@ -66,3 +66,23 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+
+[tig]
+	line-graphics = utf-8
+	tab-size = 2
+[tig "bind"]
+	status = C !git commit -v
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

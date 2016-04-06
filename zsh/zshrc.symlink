@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
-DEFAULT_USER="ben"
+DEFAULT_USER="bstraub"
 #ZSH_THEME="blinks"
 #ZSH_THEME="eastwood"
 #ZSH_THEME="nicoulaj"

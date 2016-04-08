@@ -1,4 +1,2 @@
-if [[ -f "$(brew --prefix nvm)/nvm.sh" ]] then
-  export NVM_DIR="$HOME/.nvm"
-  . "$(brew --prefix nvm)/nvm.sh"
-fi
+export NVM_DIR="/Users/bstraub/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

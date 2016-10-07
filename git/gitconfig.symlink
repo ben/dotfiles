@@ -21,7 +21,7 @@
 [push]
 	default = upstream
 [core]
-	excludesfile = /Users/ben/.gitignore_global
+	excludesfile = /Users/bstraub/.gitignore_global
 	;editor = atom --wait
 [color]
 	ui = auto
@@ -41,11 +41,12 @@
 	keepBackup = false
 
 [merge]
-	;tool = diffmerge
-	tool = p4merge
+	tool = diffmerge
+	;tool = p4merge
 	;conflictstyle = diff3
 [diff]
 	tool = p4diff
+	algorithm = patience
 	;tool = p4merge
 	;external = p4diff
 [rerere]
@@ -77,12 +78,16 @@
 	smudge = git hawser smudge %f
 	required = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[commit]
+	template = /Users/bstraub/.stCommitMsg
+[github]
+	token = 8e2cd16a5b1515c38047c9834bc9e324c02bb223

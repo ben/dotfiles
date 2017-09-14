@@ -14,6 +14,7 @@
 	co = checkout
 	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
 	bdone = "!f() { git checkout ${1-master} && git pull && git bclean ${1-master}; }; f"
+	pr = pull-request
 
 [hub]
 	protocol = https
@@ -59,8 +60,6 @@
 	;helper = store --file ~/git-2.store
 [fetch]
 	prune = true
-[pull]
-	rebase = true
 [gh]
 	protocol = https
 [filter "media"]
@@ -79,7 +78,7 @@
 	required = true
 [difftool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true

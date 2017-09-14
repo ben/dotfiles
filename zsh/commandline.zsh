@@ -1,0 +1,1 @@
+alias hl='highlight -O xterm256'

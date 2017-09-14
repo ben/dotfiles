@@ -1,9 +1,14 @@
-
-
 function sup() {
-	zdi vm start
-	sleep 5
 	zdi services restart
 	zdi apps restart
-	echo aight yo
+	zdi dnsmasq restart
+	zdi inbox restart -d
 }
+
+alias zdi-update="pushd ~/Code/zendesk/docker-images; git pull --autostash --rebase; docker ps --format '{{.Names}}' | xargs -P 5 -I IMAGE sh -c 'zdi IMAGE pull -v && zdi IMAGE restart'; popd"
+
+export DOCKER_NETWORK_PARAVIRTUALIZED=true
+export DEDICATED_DOCKER_DISK=true
+source /Users/bstraub/Code/zendesk/docker-images/dockmaster/zdi.sh
+
+export DOCKER_SHARE_IVY=true

@@ -1,0 +1,1 @@
+export PATH=~/Code/zendesk/zendesk_sqid_tools/bin:$PATH;

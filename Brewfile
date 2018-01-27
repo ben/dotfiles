@@ -1333,6 +1333,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'vlc'
 cask 'zoomus'
+cask 'spectacle'
 
 # mas
 

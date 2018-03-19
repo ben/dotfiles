@@ -9,6 +9,6 @@ alias zdi-update="pushd ~/Code/zendesk/docker-images; git pull --autostash --reb
 
 export DOCKER_NETWORK_PARAVIRTUALIZED=true
 export DEDICATED_DOCKER_DISK=true
-source /Users/bstraub/Code/zendesk/docker-images/dockmaster/zdi.sh
+[[ -e ~/Code/zenesk/docker-images/dockmaster/zdi.sh ]] && source ~/Code/zendesk/docker-images/dockmaster/zdi.sh
 
 export DOCKER_SHARE_IVY=true

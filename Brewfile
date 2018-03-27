@@ -1260,6 +1260,7 @@ brew 'watchman'
 brew 'xhyve'
 brew 'shellcheck'
 brew 'write-good'
+brew 'autojump'
 
 # casks
 
@@ -1293,4 +1294,3 @@ mas 'Microsoft Remote Desktop', id: 715768417
 mas 'Podcast Chapters', id: 1070963477
 mas '2STP Companion', id: 1055307502
 #mas 'Wallcat', id: 1000397973
-

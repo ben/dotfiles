@@ -4,3 +4,5 @@
 function cdm () {
 	eval $(docker-machine env $1);
 }
+
+alias kc=kubectl

@@ -11,6 +11,9 @@ DEFAULT_USER="bstraub"
 #ZSH_THEME="eastwood"
 #ZSH_THEME="nicoulaj"
 #ZSH_THEME="miloshadzic"
+ZSH_THEME="arrow"
+ZSH_THEME="miloshadzic"
+ZSH_THEME="sunrise"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -54,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # shortcut to this dotfiles path is $ZSH
 export DOTFILES=$HOME/.dotfiles
 
-# source every .zsh file in this rep
+# source every .zsh file in this repo
 for config_file ($DOTFILES/**/*.zsh) source $config_file
 
 # use .localrc for SUPER SECRET CRAP that you don't
@@ -65,8 +68,7 @@ then
 fi
 
 # Customize to your needs...
-export PATH="$DOTFILES/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$DOTFILES/bin:$HOME/bin:$PATH"
 
 # Remove some of oh-my-zsh's stuff
 unalias 1
@@ -78,3 +80,9 @@ unalias 6
 unalias 7
 unalias 8
 unalias 9
+
+# Spaceship
+# autoload -U promptinit; promptinit
+# prompt spaceship
+# export SPACESHIP_DOCKER_SHOW=false
+# export SPACESHIP_KUBERNETES_SHOW=false

@@ -70,6 +70,9 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 
+[includeIf "gitdir:~/Code/zendesk/"]
+	path = ~/.dotfiles/zendesk/.gitconfig
+
 [tig]
 	line-graphics = utf-8
 	tab-size = 2

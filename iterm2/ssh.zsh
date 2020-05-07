@@ -17,7 +17,7 @@ function colorssh() {
   fi
   ssh $*
 }
-compdef _ssh tabc=ssh
+# compdef _ssh tabc=ssh
 
 alias ssh="colorssh"
 tab-reset

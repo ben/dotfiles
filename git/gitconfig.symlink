@@ -3,6 +3,8 @@
 	email = ben@straub.cc
 
 [alias]
+	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+	bdone = "!f() { git checkout ${1-master} && git pull && git bclean ${1-master}; }; f"
 	lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	lola = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	excludesfile = /Users/ben/.gitignore_global
@@ -12,8 +14,6 @@
 	st = status -sbu
 	ci = commit
 	co = checkout
-	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
-	bdone = "!f() { git checkout ${1-master} && git pull && git bclean ${1-master}; }; f"
 	pr = pull-request
 	sha = rev-parse HEAD
 	git = !exec git
@@ -31,7 +31,7 @@
 	ui = auto
 
 [mergetool "diffmerge"]
-	cmd = "/Applications/DiffMerge.app/Contents/MacOS/diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE"
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
 	trustExitCode = true
 	keepBackup = false
 [difftool "diffmerge"]
@@ -51,6 +51,7 @@
 [diff]
 	tool = p4diff
 	algorithm = patience
+	noprefix = true
 	;tool = p4merge
 	;external = p4diff
 [rerere]
@@ -93,7 +94,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[commit]
-	template = /Users/bstraub/.stCommitMsg
 [github]
 	token = 8e2cd16a5b1515c38047c9834bc9e324c02bb223

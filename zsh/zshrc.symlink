@@ -11,8 +11,6 @@ DEFAULT_USER="bstraub"
 #ZSH_THEME="eastwood"
 #ZSH_THEME="nicoulaj"
 #ZSH_THEME="miloshadzic"
-ZSH_THEME="arrow"
-ZSH_THEME="miloshadzic"
 ZSH_THEME="sunrise"
 
 # Example aliases
@@ -48,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gh osx colored-man zsh-syntax-highlighting brew virtualenv docker docker-compose)
+plugins=(git osx brew virtualenv docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,3 +84,18 @@ unalias 9
 # prompt spaceship
 # export SPACESHIP_DOCKER_SHOW=false
 # export SPACESHIP_KUBERNETES_SHOW=false
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# BEGIN DOCKER-IMAGES
+export DOCKER_FOR_MAC_ENABLED=true
+source /Users/ben/Code/zendesk/zdi/dockmaster/zdi.sh
+# END DOCKER-IMAGES
+# BEGIN ZDI
+export DOCKER_FOR_MAC_ENABLED=true
+source /Users/ben/Code/zendesk/zdi/dockmaster/zdi.sh
+# END ZDI
+
+# starship
+eval "$(starship init zsh)"
+# alias g=git

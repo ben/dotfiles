@@ -5,8 +5,8 @@ export DEDICATED_DOCKER_DISK=true
 [[ -r $HOME/Code/zendesk/zdi/dockmaster/zdi.sh ]] && source $HOME/Code/zendesk/zdi/dockmaster/zdi.sh
 
 export DOCKER_SHARE_IVY=true
-export DOCKER_VM_MEMORY=7168
-export DOCKER_VM_CPUS=2
+export DOCKER_VM_MEMORY=16384
+export DOCKER_VM_CPUS=6
 
 export KRAGLE_OAUTH_KEY=abc1234
 export KRAGLE_OAUTH_SECRET=collaboration123

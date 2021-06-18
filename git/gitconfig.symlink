@@ -19,16 +19,21 @@
 	git = !exec git
 	br = browse
 
+[apply]
+	whitespace = nowarn
+
 [hub]
 	protocol = https
 
 [push]
 	default = upstream
 [core]
-	excludesfile = /Users/bstraub/.gitignore_global
-	;editor = atom --wait
+	excludesfile = /Users/ben/.gitignore_global
 [color]
 	ui = auto
+
+[pull]
+	ff = only
 
 [mergetool "diffmerge"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
@@ -84,15 +89,19 @@
 	smudge = git hawser smudge %f
 	required = true
 [difftool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
-	path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[github]
-	token = 8e2cd16a5b1515c38047c9834bc9e324c02bb223
+[init]
+	defaultBranch = main
+[branch]
+	sort = -committerdate
+
+

@@ -5,15 +5,15 @@
 ##
 # Browsers
 ##
-cask 'firefox'
-cask 'google-chrome'
+# cask 'firefox'
+# cask 'google-chrome'
 
 
 ##
 # Passwords
 ##
-cask 'keybase'
-cask '1password'
+# cask 'keybase'
+# cask '1password'
 
 ##
 # Terminals

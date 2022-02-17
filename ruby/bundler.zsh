@@ -1,2 +1,3 @@
 export BUNDLE_FORCE_RUBY_PLATFORM=true
-export MAKE="make -j$(nproc)"
+# alias nproc="sysctl -n hw.logicalcpu"
+# export MAKE="make -l$(nproc)"

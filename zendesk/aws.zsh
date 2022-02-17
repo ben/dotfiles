@@ -4,6 +4,9 @@
 #
 # `aws-login zendesk`
 #
+# For instructions on how to set up your ~/.saml2aws file, check out
+# https://zendeskdev.zendesk.com/hc/en-us/articles/360012780500-How-do-I-access-AWS-from-my-laptop-
+#
 # Source this file from your .bashrc or execute it
 #
 # Keep it bash/zsh portable:

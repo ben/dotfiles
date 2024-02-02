@@ -5,11 +5,11 @@ export PATH=$PATH:~/Library/Python/3.7/bin:~/Library/Python/2.7/bin
 # to ~/.profile and ~/.zprofile:
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# eval "$(pyenv init --path)"
 
 # Load pyenv into the shell by adding
 # the following to ~/.zshrc:
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 # Make sure to restart your entire logon session
 # for changes to profile files to take effect.
